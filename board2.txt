@@ -1,0 +1,5 @@
+Input state: xxxxxxxxxWxxxxxxBxxxx
+Output state: WxxxxxxxxWxxxxxxBxxxx
+States evaluated by static estimation: 342
+MINIMAX estimate: 0
+

@@ -1,0 +1,72 @@
+#----------------------------------------------------------------------
+# File makemcr creates a micro language compiler
+#----------------------------------------------------------------------
+# Author: Vitalis Ibe
+# E-Mail: Vibe@uco.edu
+# Date: January, 2012
+#----------------------------------------------------------------------
+# Copyright January, 2012 by Thomas R. Turner.
+# Do not reproduce without permission from Thomas R. Turner.
+#---------------------------------------------------------------------
+#----------------------------------------------------------------------
+# Object files
+#----------------------------------------------------------------------
+obj	=	MiniMaxOpening.o	\
+		MiniMaxGame.o		\
+		ABOpening.o		\
+		ABGame.o		\
+		MiniMaxOpeningBlack.o	\
+		MiniMaxOpeningImproved.o	\
+		MiniMaxGameImproved.o
+#----------------------------------------------------------------------
+# Bind the Micro Parser
+#----------------------------------------------------------------------
+MiniMaxOpening:	${obj}
+	g++ -o MiniMaxOpening ${obj} -lm
+#----------------------------------------------------------------------
+# File p02.cpp processes command line arguments
+#----------------------------------------------------------------------
+MiniMaxOpening.o:	MiniMaxOpening.cpp   
+	g++ -c -g MiniMaxOpening.cpp
+
+MiniMaxGame:	${obj}
+	g++ -o MiniMaxGame ${obj} -lm
+
+MiniMaxGame.o:	MiniMaxGame.cpp
+	g++ -c -g MiniMaxGame.cpp
+
+ABOpening:	${obj}
+	g++ -o ABOpening ${obj} -lm
+
+ABOpening.o:	ABOpening.cpp
+	g++ -c -g ABOpening.cpp
+
+ABGame:	${obj}
+	g++ -o ABGame ${obj} -lm
+
+ABGame.o:	ABGame.cpp
+	g++ -c -g ABGame.cpp
+
+MiniMaxOpeningBlack:	${obj}
+	g++ -o MiniMaxOpeningBlack ${obj} -lm
+
+MiniMaxOpeningBlack.o:	MiniMaxOpeningBlack.cpp
+	g++ -c -g MiniMaxOpeningBlack.cpp
+
+MiniMaxGameBlack:	${obj}
+	g++ -o MiniMaxGameBlack ${obj} -lm
+
+MiniMaxGameBlack.o:	MiniMaxGameBlack.cpp
+	g++ -c -g MiniMaxGameBlack.cpp
+
+MiniMaxOpeningImproved:	$(obj)
+	g++ -o MiniMaxOpeningImproved ${obj} -lm
+
+MiniMaxOpeningImproved.o:	MiniMaxOpeningImproved.cpp
+	g++ -c -g MiniMaxOpeningImproved.cpp
+
+MiniMaxGameImproved:	$(obj)
+	g++ -o MiniMaxGameImproved ${obj} -lm
+
+MiniMaxGameImproved.o:	MiniMaxGameImproved.cpp
+	g++ -c -g MiniMaxGameImproved.cpp
